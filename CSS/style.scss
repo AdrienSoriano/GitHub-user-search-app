@@ -1,0 +1,51 @@
+$maincolor: #ffffff;
+$defaultwidth: 100%;
+$defautlheight: 100vh;
+$blue: #0079ff;
+$lightgrey: #697c9a;
+$darkergrey: #4b6a9b;
+$black: #2b3442;
+$palewhite: #f6f8ff;
+$white: #fefefe;
+$mainfont: Space Mono;
+$h1fontweight: bold;
+$h1fontsize: 26px;
+$h1lineheight: 38px;
+$h2fontweight: bold;
+$h2fontsize: 22px;
+$h2lineheight: 33px;
+$h3fontsize: 16px;
+$h3lineheight: 33px;
+$h4fontsize: 13px;
+$h4lineheight: 20px;
+$bodyfontsize: 15px;
+$bodylineheight: 25px;
+
+
+
+html{
+    background-color: $maincolor;
+    width: $defaultwidth;
+    height: $defautlheight;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 97%;
+    margin: 0;
+    padding: 0;
+    font-family: $mainfont;
+    font-size: $bodyfontsize;
+    line-height: $bodylineheight;
+}
+h1{
+    font-size: $h1fontsize;
+    font-weight: $h1fontweight;
+    line-height: $h1lineheight;
+}
+input{
+    background-image: url(Shape_2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
