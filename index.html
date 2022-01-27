@@ -7,23 +7,46 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>devfinder</title>
+
+    <!-- Suivi de la maquette donnée sur figma -->
+
 </head>
 <body>
 
     <header>
+        
         <h1>devfinder</h1>
 
+        <!-- Contenu du dark mode -->
+
         <span>DARK</span>
-        <img src="moon.svg" alt="">
+        <img src="moon.png" alt="Cliquez ici pour afficher le mode sombre">
+    
     </header>
 
     <main>
-        <div>
-            <input type="text" placeholder="Search GitHub username...">
-            <button>Search</button>
-        </div>
-        
-        <div></div>
+
+        <section>
+
+            <!-- 1ère section, la barre de recherche -->
+
+            <div class="search">
+                <img src="shape_2.png" alt="icone loupe de la barre de recherche">
+                <input type="text" placeholder="Search GitHub username...">
+                <span></span>
+                <button>Search</button>
+            </div>
+
+        </section>
+
+        <section>
+
+            <!-- 2ème section, le résultat de la recherche -->
+
+            <div class="return"></div>
+
+        </section>
+
     </main>
 
     

@@ -1,3 +1,5 @@
+/* suivi de la charte graphique sur le fichier figma pour le mode standard*/
+
 $maincolor: #ffffff;
 $defaultwidth: 100%;
 $defautlheight: 100vh;
@@ -41,17 +43,93 @@ body{
     font-size: $bodyfontsize;
     line-height: $bodylineheight;
     background-color: $palewhite;
+    display: grid;
+    grid-template:  20% 60% 20% / 20% 50% 30%;
+    grid-gap: 5%;
 }
-h1{
+
+/* HEADER */
+
+header{
+    grid-area: 1 / 2 / 1 / 2;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 93% 7%;
+    grid-template-rows: 75% 25%;
+    width: 100%;
+}
+header h1{
     font-size: $h1fontsize;
     font-weight: $h1fontweight;
     line-height: $h1lineheight;
+    grid-area: 2 / 1 / 2 / 1;
+    justify-self: flex-start;
+    align-self: center;
 }
-input{
-    background-image: url(Shape_2.png);
-    background-repeat: no-repeat;
-    background-position: left;
+header span, img{
+    grid-area: 2 / 2 / 2 / 2;
+    align-self: center;
+    color: $lightgrey;
+}
+header span{
+    font-size: $h4fontsize;
+    font-weight: bold;
+    line-height: $h4lineheight;
+    justify-self: flex-start;
+}
+header img{
+    justify-self: flex-end;
+}
+header span:hover, img:hover{
+    cursor: pointer;
+    color: $black;
+}
+
+/* MAIN */
+
+main{
+    grid-area: 2 / 2 / 2 / 2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 85%;
+    grid-gap: 5%;
+}
+
+/* SECTION 1*/
+main :nth-child(1){
+    grid-area: 1 / 1 / 1 / 1;
 }
 div{
     background-color: $white;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    border-radius: 15px;
 }
+.search{
+    display: grid;
+    grid-template: 100% / 10% 60% 15% 15%;
+}
+.search img{
+    justify-self: center;
+    align-self: center;
+}
+.search input{
+    border: none;   
+    font-family: $mainfont;
+    font-size: 18px;
+}
+.search button{
+    border: none;
+    border-radius: 10px;
+    height: 75%;
+    width: 85%;
+    justify-self: center;
+    align-self: center;
+    color: $white;
+    background-color: $blue;
+    font-size: $h3fontsize;
+    font-family: $mainfont;
+}
+
+/* SECTION 2*/
