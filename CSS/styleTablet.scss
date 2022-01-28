@@ -38,7 +38,7 @@ html{
 }
 body{
     width: 100%;
-    height: 100%;
+    height: 160%;
     margin: 0;
     padding: 0;
     font-family: $mainfont;
@@ -46,7 +46,7 @@ body{
     line-height: $bodylineheight;
     background-color: $palewhite;
     display: grid;
-    grid-template:  20% 80% 20% / 5% 81% 10%;
+    grid-template:  20% 55% 15% / 5% 81% 10%;
 }
 
 /* HEADER */
@@ -145,22 +145,22 @@ div{
 
 .return{
     display: grid;
-    grid-template-columns: 5% 26% 5% 30% 5% 30%;
+    grid-template-columns: 5% 5% 21% 15% 5% 44%;
     grid-template-rows: 10% 20% 25% 20% 10% 10%;
     grid-gap: 1%;
 }
 .avatar{
-    grid-area: 2 / 2 / 2 / 2;
+    grid-area: 2 / 3 / 2 / 3;
     border-radius: 50%;
-    justify-self: center;
+    justify-self: flex-start;
     align-self: center;
     display: flex;
-    height: 120%;
-    width: 70%;
+    height: 110%;
+    width: 85%;
     background-color: $black;
 }
 .pseudo{
-    grid-area: 2 / 3 / 2 / -2;
+    grid-area: 2 / 4 / 2 / -1;
     align-self: flex-start;
     font-size: $h1fontsize;
     font-weight: $h1fontweight;
@@ -168,13 +168,13 @@ div{
     color: $black;
 }
 .dateCreation{
-    grid-area: 2 / 3 / 2 / -2;
+    grid-area: 2 / 4 / 2 / -1;
     align-self: flex-end;
     justify-self: flex-start;
     color: $lightgrey;
 }
 .identifiant{
-    grid-area: 2 / 3 / 2 / -2;
+    grid-area: 2 / 4 / 2 / -1;
     align-self: center;
     color: $blue;
     padding-top: 5%;
@@ -190,11 +190,11 @@ div{
     align-self: center;
 }
 .stats{
-    grid-area: 4 / 2 / 4 / -3;
+    grid-area: 4 / 2 / 4 / -1;
     height: 100%;
-    width: 180%;
+    width: 90%;
     display: grid;
-    grid-template-columns: 5% 20% 30% 20% 5%;
+    grid-template-columns: 5% 28% 29% 29% 5%;
     grid-template-rows: 50% 50%;
     background-color: $palewhite;
     box-shadow: none;
@@ -252,7 +252,7 @@ div{
     text-decoration-line: underline;
 }
 .icone-twitter{
-    grid-area: 5 / 4 / 5 / 4;
+    grid-area: 5 / 5 / 5 / 5;
     justify-self: center;
     align-self: center;
 }
@@ -260,7 +260,7 @@ div{
     cursor: pointer;
 }
 .twitter{
-    grid-area: 5 / 5 / 5 / 5;
+    grid-area: 5 / 6 / 5 / 6;
     justify-self: flex-start;
     align-self: center;
     color: $darkergrey;
@@ -285,12 +285,12 @@ div{
     text-decoration-line: underline;
 }
 .icone-building{
-    grid-area: 6 / 4 / 6 / 4;
+    grid-area: 6 / 5 / 6 / 5;
     align-self: flex-start;
     justify-self: center;
 }
 .building{
-    grid-area: 6 / 5 / 6 / 5;
+    grid-area: 6 / 6 / 6 / 6;
     justify-self: flex-start;
     align-self: flex-start;
     color: $darkergrey;

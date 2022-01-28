@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/styleTablet.css">
+    <link rel="stylesheet" href="CSS/stylePhone.css">
     <link href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>devfinder</title>
 
     <!-- Suivi de la maquette donnée sur figma -->
 
 </head>
-<body>
+<body id="body" class="light-mode">
 
     <header>
         
@@ -20,8 +21,8 @@
 
         <!-- Contenu du dark mode -->
 
-        <span>DARK</span>
-        <img src="moon.svg" alt="Cliquez ici pour afficher le mode sombre">
+        <span class="dark light-mode">DARK</span>
+        <img class="dark light-mode" src="moon.svg" alt="Cliquez ici pour afficher le mode sombre">
     
     </header>
 
@@ -31,9 +32,9 @@
 
             <!-- 1ère section, la barre de recherche -->
 
-            <div class="search">
+            <div class="search light-mode">
                 <img src="shape_2.png" alt="icone loupe de la barre de recherche">
-                <input type="text" placeholder="Search GitHub username...">
+                <input class="light-mode" type="text" placeholder="Search GitHub username...">
                 <span></span>
                 <button>Search</button>
             </div>
@@ -44,18 +45,18 @@
 
             <!-- 2ème section, le résultat de la recherche -->
 
-            <div class="return">
+            <div class="return light-mode">
                 <div class="avatar"></div>
-                <span class="pseudo">The Octocat</span>
-                <span class="dateCreation">Joined 25 Jan 2011</span>
+                <span class="pseudo light-mode">The Octocat</span>
+                <span class="dateCreation light-mode">Joined 25 Jan 2011</span>
                 <span class="identifiant">@octocat</span>
-                <span class="biographie">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</span>
-                <div class="stats">
-                    <p id="repos">Repos</p> <p id="followers">Followers</p> <p id="following">Following</p>
-                    <span class="repos">8</span> <span class="followers">3938</span> <span class="following">9</span>
+                <span class="biographie light-mode">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</span>
+                <div class="stats light-mode">
+                    <p id="repos" class="light-mode">Repos</p> <p id="followers" class="light-mode">Followers</p> <p id="following" class="light-mode">Following</p>
+                    <span class="repos light-mode">8</span> <span class="followers light-mode">3938</span> <span class="following light-mode">9</span>
                 </div>
-                <img class="icone-nav" src="003-pin.png" alt="icone de localisation"> <span class="localisation">San Francisco</span> <img class="icone-twitter" src="004-twitter.png" alt="icone du réseau twitter"> <span class="twitter">Not Available</span>
-                <img class="icone-web" src="002-url.png" alt="icone de lien de site web"> <span class="web">https://github.blog</span> <img class="icone-building" src="001-office-building.png" alt="icone du lieu de travail"> <span class="building">@github</span>
+                <img class="icone-nav light-mode" src="003-pin.png" alt="icone de localisation"> <span class="localisation light-mode">San Francisco</span> <img class="icone-twitter light-mode" src="004-twitter.png" alt="icone du réseau twitter"> <span class="twitter light-mode">Not Available</span>
+                <img class="icone-web light-mode" src="002-url.png" alt="icone de lien de site web"> <span class="web light-mode">https://github.blog</span> <img class="icone-building light-mode" src="001-office-building.png" alt="icone du lieu de travail"> <span class="building light-mode">@github</span>
                 
             </div>
 
@@ -63,7 +64,6 @@
 
     </main>
 
-    <script src="CSS/app.js"></script>
-    
+    <script src="app.js"></script>
 </body>
 </html>
