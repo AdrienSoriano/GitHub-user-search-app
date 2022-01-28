@@ -1,4 +1,6 @@
-/* suivi de la charte graphique sur le fichier figma pour le mode standard*/
+/* suivi de la charte graphique sur le fichier figma pour la tablette*/
+    
+@media screen and (max-width: 768px) {
 
 $maincolor: #ffffff;
 $defaultwidth: 100%;
@@ -36,7 +38,7 @@ html{
 }
 body{
     width: 100%;
-    height: 97%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: $mainfont;
@@ -44,8 +46,7 @@ body{
     line-height: $bodylineheight;
     background-color: $palewhite;
     display: grid;
-    grid-template:  20% 70% 20% / 20% 46% 30%;
-    grid-gap: 5%;
+    grid-template:  20% 80% 20% / 5% 81% 10%;
 }
 
 /* HEADER */
@@ -54,7 +55,7 @@ header{
     grid-area: 1 / 2 / 1 / 2;
     justify-self: center;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 87% 12%;
     grid-template-rows: 75% 25%;
     width: 100%;
 }
@@ -144,58 +145,60 @@ div{
 
 .return{
     display: grid;
-    grid-template-columns: 26% 5% 30% 5% 30%;
-    grid-template-rows: 25% 20% 25% 10% 16%;
+    grid-template-columns: 5% 26% 5% 30% 5% 30%;
+    grid-template-rows: 10% 20% 25% 20% 10% 10%;
     grid-gap: 1%;
 }
 .avatar{
-    grid-area: 1 / 1 / -4 / -4;
+    grid-area: 2 / 2 / 2 / 2;
     border-radius: 50%;
     justify-self: center;
     align-self: center;
     display: flex;
-    height: 50%;
-    width: 45%;
+    height: 120%;
+    width: 70%;
     background-color: $black;
 }
 .pseudo{
-    grid-area: 1 / 2 / 1 / -2;
-    align-self: center;
+    grid-area: 2 / 3 / 2 / -2;
+    align-self: flex-start;
     font-size: $h1fontsize;
     font-weight: $h1fontweight;
     line-height: $h1lineheight;
     color: $black;
 }
 .dateCreation{
-    grid-area: 1 / 5 / 1 / 5;
-    align-self: center;
+    grid-area: 2 / 3 / 2 / -2;
+    align-self: flex-end;
     justify-self: flex-start;
     color: $lightgrey;
 }
 .identifiant{
-    grid-area: 1 / 2 / 1 / -2;
-    align-self: flex-end;
+    grid-area: 2 / 3 / 2 / -2;
+    align-self: center;
     color: $blue;
+    padding-top: 5%;
 }
 .identifiant:hover{
     cursor: pointer;
     text-decoration-line: underline;
 }
 .biographie{
-    grid-area: 2 / 2 / 2 / -1;
+    grid-area: 3 / 2 / 3 / -1;
     width: 90%;
     color: $lightgrey;
+    align-self: center;
 }
 .stats{
-    grid-area: 3 / 2 / 3 / -3;
-    height: 70%;
+    grid-area: 4 / 2 / 4 / -3;
+    height: 100%;
     width: 180%;
     display: grid;
     grid-template-columns: 5% 20% 30% 20% 5%;
     grid-template-rows: 50% 50%;
     background-color: $palewhite;
     box-shadow: none;
-    grid-gap: 5%;
+    grid-gap: 1%;
 }
 #repos{
     grid-area: 1 / 2 / 1 / 2;
@@ -234,12 +237,12 @@ div{
     font-weight: bold;
 }
 .icone-nav{
-    grid-area: 4 / 2 / 4 / 2;
+    grid-area: 5 / 2 / 5 / 2;
     justify-self: center;
     align-self: center;
 }
 .localisation{
-    grid-area: 4 / 3 / 4 / 3;
+    grid-area: 5 / 3 / 5 / 3;
     justify-self: flex-start;
     align-self: center;
     color: $darkergrey;
@@ -249,7 +252,7 @@ div{
     text-decoration-line: underline;
 }
 .icone-twitter{
-    grid-area: 4 / 4 / 4 / 4;
+    grid-area: 5 / 4 / 5 / 4;
     justify-self: center;
     align-self: center;
 }
@@ -257,7 +260,7 @@ div{
     cursor: pointer;
 }
 .twitter{
-    grid-area: 4 / 5 / 4 / 5;
+    grid-area: 5 / 5 / 5 / 5;
     justify-self: flex-start;
     align-self: center;
     color: $darkergrey;
@@ -267,12 +270,12 @@ div{
     text-decoration-line: underline;
 }
 .icone-web{
-    grid-area: 5 / 2 / 5 / 2;
+    grid-area: 6 / 2 / 6 / 2;
     justify-self: center;
     align-self: flex-start;
 }
 .web{
-    grid-area: 5 / 3 / 5 / 3;
+    grid-area: 6 / 3 / 6 / 3;
     justify-self: flex-start;
     align-self: flex-start;
     color: $darkergrey;
@@ -282,12 +285,12 @@ div{
     text-decoration-line: underline;
 }
 .icone-building{
-    grid-area: 5 / 4 / 5 / 4;
+    grid-area: 6 / 4 / 6 / 4;
     align-self: flex-start;
     justify-self: center;
 }
 .building{
-    grid-area: 5 / 5 / 5 / 5;
+    grid-area: 6 / 5 / 6 / 5;
     justify-self: flex-start;
     align-self: flex-start;
     color: $darkergrey;
@@ -295,4 +298,5 @@ div{
 .building:hover{
     cursor: pointer;
     text-decoration-line: underline;
+}
 }

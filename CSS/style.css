@@ -31,7 +31,7 @@ header {
   grid-area: 1/2/1/2;
   justify-self: center;
   display: grid;
-  grid-template-columns: 91% 9%;
+  grid-template-columns: 90% 10%;
   grid-template-rows: 75% 25%;
   width: 100%;
 }
@@ -45,6 +45,10 @@ header h1 {
   align-self: center;
 }
 
+header h1:hover {
+  cursor: pointer;
+}
+
 header span, img {
   grid-area: 2/2/2/2;
   align-self: center;
@@ -56,6 +60,7 @@ header span {
   font-weight: bold;
   line-height: 20px;
   justify-self: flex-start;
+  letter-spacing: 2.5px;
 }
 
 header img {
@@ -102,6 +107,7 @@ div {
   font-family: Space Mono;
   font-size: 18px;
   outline: none;
+  caret-color: #0079ff;
 }
 
 .search button {
@@ -117,12 +123,16 @@ div {
   font-family: Space Mono;
 }
 
+.search button:hover {
+  cursor: pointer;
+}
+
 /* SECTION 2*/
 .return {
   display: grid;
-  grid-template-columns: 20% 5% 20% 5% 30%;
-  grid-template-rows: 25% 15% 20% 10% 10%;
-  grid-gap: 5%;
+  grid-template-columns: 26% 5% 30% 5% 30%;
+  grid-template-rows: 25% 20% 25% 10% 16%;
+  grid-gap: 1%;
 }
 
 .avatar {
@@ -132,7 +142,7 @@ div {
   align-self: center;
   display: flex;
   height: 50%;
-  width: 50%;
+  width: 45%;
   background-color: #2b3442;
 }
 
@@ -158,6 +168,12 @@ div {
   color: #0079ff;
 }
 
+.identifiant:hover {
+  cursor: pointer;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .biographie {
   grid-area: 2/2/2/-1;
   width: 90%;
@@ -166,7 +182,8 @@ div {
 
 .stats {
   grid-area: 3/2/3/-3;
-  width: 145%;
+  height: 70%;
+  width: 180%;
   display: grid;
   grid-template-columns: 5% 20% 30% 20% 5%;
   grid-template-rows: 50% 50%;
@@ -227,6 +244,13 @@ div {
   grid-area: 4/3/4/3;
   justify-self: flex-start;
   align-self: center;
+  color: #4b6a9b;
+}
+
+.localisation:hover {
+  cursor: pointer;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .icone-twitter {
@@ -235,32 +259,57 @@ div {
   align-self: center;
 }
 
+.icone-twitter:hover {
+  cursor: pointer;
+}
+
 .twitter {
   grid-area: 4/5/4/5;
   justify-self: flex-start;
   align-self: center;
+  color: #4b6a9b;
+}
+
+.twitter:hover {
+  cursor: pointer;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .icone-web {
   grid-area: 5/2/5/2;
   justify-self: center;
-  align-self: center;
+  align-self: flex-start;
 }
 
 .web {
   grid-area: 5/3/5/3;
   justify-self: flex-start;
-  align-self: center;
+  align-self: flex-start;
+  color: #4b6a9b;
+}
+
+.web:hover {
+  cursor: pointer;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .icone-building {
   grid-area: 5/4/5/4;
-  align-self: center;
+  align-self: flex-start;
   justify-self: center;
 }
 
 .building {
   grid-area: 5/5/5/5;
   justify-self: flex-start;
-  align-self: center;
+  align-self: flex-start;
+  color: #4b6a9b;
+}
+
+.building:hover {
+  cursor: pointer;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }/*# sourceMappingURL=style.css.map */
