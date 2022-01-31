@@ -25,6 +25,7 @@ $bodylineheight: 25px;
 $textdarkmode: #ffffff;
 $backgrounddarkmode: #141d2f;
 $secondarybackgrounddarkmode: #1e2a47;
+$sundarkmode: #90A4D4;
 
 *{
     margin: 0;
@@ -71,7 +72,7 @@ header h1{
 header h1:hover{
     cursor: pointer;
 }
-header span, img{
+header span, #moon, .dark{
     grid-area: 2 / 2 / 2 / 2;
     align-self: center;
     color: $lightgrey;
@@ -83,12 +84,36 @@ header span{
     justify-self: flex-start;
     letter-spacing: 2.5px;
 }
-header img{
+header #moon{
     justify-self: flex-end;
 }
-header span:hover, img:hover{
+header span:hover, header #Path:hover, .Dark:hover{
     cursor: pointer;
     color: $black;
+    fill: $black;
+}
+.Dark{
+    grid-area: 2 / 2 / 2 / 2;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: grid;
+    grid-template: 100% / 50% 50%;
+    width: 100%;
+}
+#moon{
+    grid-area: 1 / 2 / 1 / 2;
+    justify-self: flex-end;
+}
+.dark{
+    grid-area: 1 / 1 / 1 / 1;
+    justify-self: flex-start;
+}
+#sun, .sun{
+    visibility: hidden;
+}
+.light{
+    visibility: hidden;
 }
 
 /* MAIN */
@@ -342,10 +367,28 @@ header h1{
 header h1:hover{
     cursor: pointer;
 }
-header span, img{
+.Dark{
+    grid-area: 2 / 2 / 2 / 2;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: grid;
+    grid-template: 100% / 50% 50%;
+    width: 100%;
+}
+#moon{
+    grid-area: 1 / 2 / 1 / 2;
+    justify-self: flex-end;
+}
+.light{
+    grid-area: 1 / 1 / 1 / 1;
+    align-self: center;
+    justify-self: flex-start;
+}
+header span, #moon, .sun{
     grid-area: 2 / 2 / 2 / 2;
     align-self: center;
-    color: $textdarkmode;
+    color: $lightgrey;
 }
 header span{
     font-size: $h4fontsize;
@@ -353,13 +396,23 @@ header span{
     line-height: $h4lineheight;
     justify-self: flex-start;
     letter-spacing: 2.5px;
+    color: $textdarkmode;
 }
-header img{
+header #moon, #sun{
+    grid-area: 1 / 2 / 1 / 2;
     justify-self: flex-end;
+    align-self: center;
 }
-header span:hover, img:hover{
+header .light:hover, header .sun:hover, header .Dark{
     cursor: pointer;
-    color: $black;
+    color: $sundarkmode;
+    fill: $sundarkmode;
+}
+#moon{
+    visibility: hidden;
+}
+.dark{
+    visibility: hidden;
 }
 
 /* MAIN */

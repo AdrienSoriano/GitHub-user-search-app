@@ -48,7 +48,7 @@ body.light-mode header h1 {
 body.light-mode header h1:hover {
   cursor: pointer;
 }
-body.light-mode header span, body.light-mode img {
+body.light-mode header span, body.light-mode #moon, body.light-mode .dark {
   grid-area: 2/2/2/2;
   align-self: center;
   color: #697c9a;
@@ -60,12 +60,36 @@ body.light-mode header span {
   justify-self: flex-start;
   letter-spacing: 2.5px;
 }
-body.light-mode header img {
+body.light-mode header #moon {
   justify-self: flex-end;
 }
-body.light-mode header span:hover, body.light-mode img:hover {
+body.light-mode header span:hover, body.light-mode header #Path:hover, body.light-mode .Dark:hover {
   cursor: pointer;
   color: #2b3442;
+  fill: #2b3442;
+}
+body.light-mode .Dark {
+  grid-area: 2/2/2/2;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: grid;
+  grid-template: 100%/50% 50%;
+  width: 100%;
+}
+body.light-mode #moon {
+  grid-area: 1/2/1/2;
+  justify-self: flex-end;
+}
+body.light-mode .dark {
+  grid-area: 1/1/1/1;
+  justify-self: flex-start;
+}
+body.light-mode #sun, body.light-mode .sun {
+  visibility: hidden;
+}
+body.light-mode .light {
+  visibility: hidden;
 }
 body.light-mode main {
   grid-area: 2/2/2/2;
@@ -313,10 +337,28 @@ body.dark-mode header h1 {
 body.dark-mode header h1:hover {
   cursor: pointer;
 }
-body.dark-mode header span, body.dark-mode img {
+body.dark-mode .Dark {
+  grid-area: 2/2/2/2;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: grid;
+  grid-template: 100%/50% 50%;
+  width: 100%;
+}
+body.dark-mode #moon {
+  grid-area: 1/2/1/2;
+  justify-self: flex-end;
+}
+body.dark-mode .light {
+  grid-area: 1/1/1/1;
+  align-self: center;
+  justify-self: flex-start;
+}
+body.dark-mode header span, body.dark-mode #moon, body.dark-mode .sun {
   grid-area: 2/2/2/2;
   align-self: center;
-  color: #ffffff;
+  color: #697c9a;
 }
 body.dark-mode header span {
   font-size: 13px;
@@ -324,13 +366,23 @@ body.dark-mode header span {
   line-height: 20px;
   justify-self: flex-start;
   letter-spacing: 2.5px;
+  color: #ffffff;
 }
-body.dark-mode header img {
+body.dark-mode header #moon, body.dark-mode #sun {
+  grid-area: 1/2/1/2;
   justify-self: flex-end;
+  align-self: center;
 }
-body.dark-mode header span:hover, body.dark-mode img:hover {
+body.dark-mode header .light:hover, body.dark-mode header .sun:hover, body.dark-mode header .Dark {
   cursor: pointer;
-  color: #2b3442;
+  color: #90A4D4;
+  fill: #90A4D4;
+}
+body.dark-mode #moon {
+  visibility: hidden;
+}
+body.dark-mode .dark {
+  visibility: hidden;
 }
 body.dark-mode main {
   grid-area: 2/2/2/2;
