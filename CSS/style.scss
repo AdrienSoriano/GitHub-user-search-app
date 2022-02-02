@@ -37,7 +37,7 @@ html{
     margin: 0;
     padding: 0;
 }
-body.light-mode{
+body{
     width: 100%;
     height: 97%;
     margin: 0;
@@ -48,8 +48,7 @@ body.light-mode{
     display: grid;
     grid-template:  20% 70% 20% / 20% 46% 30%;
     grid-gap: 5%;
-    background-color: $palewhite;
-
+}
 /* HEADER */
 
 header{
@@ -67,7 +66,6 @@ header h1{
     grid-area: 2 / 1 / 2 / 1;
     justify-self: flex-start;
     align-self: center;
-    color: $black;
 }
 header h1:hover{
     cursor: pointer;
@@ -75,7 +73,6 @@ header h1:hover{
 header span, #moon, .dark{
     grid-area: 2 / 2 / 2 / 2;
     align-self: center;
-    color: $lightgrey;
 }
 header span{
     font-size: $h4fontsize;
@@ -87,10 +84,8 @@ header span{
 header #moon{
     justify-self: flex-end;
 }
-header span:hover, header #Path:hover, .Dark:hover{
+header .Dark:hover{
     cursor: pointer;
-    color: $black;
-    fill: $black;
 }
 .Dark{
     grid-area: 2 / 2 / 2 / 2;
@@ -101,11 +96,12 @@ header span:hover, header #Path:hover, .Dark:hover{
     grid-template: 100% / 50% 50%;
     width: 100%;
 }
-#moon{
+#moon, #sun, .sun{
     grid-area: 1 / 2 / 1 / 2;
     justify-self: flex-end;
+    align-self: center;
 }
-.dark{
+.dark, .light{
     grid-area: 1 / 1 / 1 / 1;
     justify-self: flex-start;
 }
@@ -132,7 +128,6 @@ div{
     height: 100%;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
     border-radius: 15px;
-    background-color: $white;
 }
 .search{
     grid-area: 1 / 1 / 1 / 1;
@@ -149,8 +144,6 @@ div{
     font-family: $mainfont;
     font-size: 18px;
     outline: none;
-    caret-color: $blue;
-    color: $lightgrey
 }
 .search button{
     border: none;
@@ -159,8 +152,6 @@ div{
     width: 85%;
     justify-self: center;
     align-self: center;
-    color: $white;
-    background-color: $blue;
     font-size: $h3fontsize;
     font-family: $mainfont;
 }
@@ -185,7 +176,6 @@ div{
     display: flex;
     height: 50%;
     width: 45%;
-    background-color: gainsboro;
 }
 .pseudo{
     grid-area: 1 / 2 / 1 / -2;
@@ -193,18 +183,15 @@ div{
     font-size: $h1fontsize;
     font-weight: $h1fontweight;
     line-height: $h1lineheight;
-    color: $black;
 }
 .dateCreation{
     grid-area: 1 / 5 / 1 / 5;
     align-self: center;
     justify-self: flex-start;   
-    color: $lightgrey;
 }
 .identifiant{
     grid-area: 1 / 2 / 1 / -2;
     align-self: flex-end;
-    color: $blue;
 }
 .identifiant:hover{
     cursor: pointer;
@@ -213,7 +200,6 @@ div{
 .biographie{
     grid-area: 2 / 2 / 2 / -1;
     width: 90%;
-    color: $lightgrey;
 }
 .stats{
     grid-area: 3 / 2 / 3 / -3;
@@ -224,43 +210,36 @@ div{
     grid-template-rows: 50% 50%;
     box-shadow: none;
     grid-gap: 5%;
-    background-color: $palewhite;
 }
 #repos{
     grid-area: 1 / 2 / 1 / 2;
     align-self: flex-end;
-    color: $lightgrey;
 }
 .repos{
     grid-area: 2 / 2 / 2 / 2;
     align-self: flex-start;
     font-size: $h2fontsize;
     font-weight: bold;
-    color: $black;
 }
 #followers{
     grid-area: 1 / 3 / 1 / 3;
     align-self: flex-end;
-    color: $lightgrey; 
 }
 .followers{
     grid-area: 2 / 3 / 2 / 3;
     align-self: flex-start;
     font-size: $h2fontsize;
     font-weight: bold;
-    color: $black;
 }
 #following{
     grid-area: 1 / 4 / 1 / 4;
     align-self: flex-end;
-    color: $lightgrey;
 }
 .following{
     grid-area: 2 / 4 / 2 / 4;
     align-self: flex-start;
     font-size: $h2fontsize;
     font-weight: bold;
-    color: $black;
 }
 .icone-nav{
     grid-area: 4 / 2 / 4 / 2;
@@ -271,7 +250,6 @@ div{
     grid-area: 4 / 3 / 4 / 3;
     justify-self: flex-start;
     align-self: center;
-    color: $darkergrey;
 }
 .localisation:hover{
     cursor: pointer;
@@ -289,7 +267,6 @@ div{
     grid-area: 4 / 5 / 4 / 5;
     justify-self: flex-start;
     align-self: center;
-    color: $darkergrey;
 }
 .twitter:hover{
     cursor: pointer;
@@ -304,7 +281,6 @@ div{
     grid-area: 5 / 3 / 5 / 3;
     justify-self: flex-start;
     align-self: flex-start;
-    color: $darkergrey;
 }
 .web:hover{
     cursor: pointer;
@@ -319,12 +295,101 @@ div{
     grid-area: 5 / 5 / 5 / 5;
     justify-self: flex-start;
     align-self: flex-start;
-    color: $darkergrey;
 }
 .building:hover{
     cursor: pointer;
     text-decoration-line: underline;
 }
+
+
+
+body.light-mode{
+    background-color: $palewhite;
+
+    header h1{
+        color: $black;
+    }
+    header .Dark{
+        color: $lightgrey;
+        background-color: transparent;
+    }
+    /*header .Dark:hover, span:hover, header #Path:hover{
+        color: $black;
+        fill: $black;
+    }*/
+    #moon{
+        visibility: visible;
+    }
+    .dark{
+        visibility: visible;
+    }
+    #sun, .sun{
+        visibility: hidden;
+    }
+    .light{
+        visibility: hidden;
+    }
+    div{
+        background-color: $white;
+    }
+    .search input{
+        color: $lightgrey
+    }
+    .search button{
+        color: $white;
+        background-color: $blue;
+    }
+    .search button:hover{
+        background-color: #60ABFF;
+    }
+    .avatar{
+        background-color: gainsboro;
+    }
+    .pseudo{
+        color: $black;
+    }
+    .dateCreation{  
+        color: $lightgrey;
+    }
+    .identifiant{
+        color: $blue;
+    }
+    .biographie{
+        color: $lightgrey;
+    }
+    .stats{
+        background-color: $palewhite;
+    }
+    #repos{
+        color: $lightgrey;
+    }
+    .repos{
+        color: $black;
+    }
+    #followers{
+        color: $lightgrey; 
+    }
+    .followers{
+        color: $black;
+    }
+    #following{
+        color: $lightgrey;
+    }
+    .following{
+        color: $black;
+    }
+    .localisation{
+        color: $darkergrey;
+    }
+    .twitter{
+        color: $darkergrey;
+    }
+    .web{
+        color: $darkergrey;
+    }
+    .building{
+        color: $darkergrey;
+    }
 }
 
 
@@ -332,299 +397,99 @@ div{
 
 
 body.dark-mode{
-    width: 100%;
-    height: 97%;
-    margin: 0;
-    padding: 0;
-    font-family: $mainfont;
-    font-size: $bodyfontsize;
-    line-height: $bodylineheight;
-    display: grid;
-    grid-template:  20% 70% 20% / 20% 46% 30%;
-    grid-gap: 5%;
     background-color: $backgrounddarkmode;
 
-
-/* HEADER */
-
-header{
-    grid-area: 1 / 2 / 1 / 2;
-    justify-self: center;
-    display: grid;
-    grid-template-columns: 90% 10%;
-    grid-template-rows: 75% 25%;
-    width: 100%;
+    header h1{
+        color: $textdarkmode;
+    }
+    header span, #moon, .sun{
+        color: $lightgrey;
+    }
+    header span{
+        color: $textdarkmode;
+    }
+    header .light:hover, header .sun:hover, header .Dark{
+        color: $sundarkmode;
+        fill: $sundarkmode;
+    }
+    .Dark{
+        background-color: transparent;
+    }
+    #moon{
+        visibility: hidden;
+    }
+    .dark{
+        visibility: hidden;
+    }
+    #sun, .sun{
+        visibility: visible;
+    }
+    .light{
+        visibility: visible;
+    }
+    div{
+        background-color: $secondarybackgrounddarkmode;
+    }
+    .search input{
+        color: $textdarkmode;
+        background-color: $secondarybackgrounddarkmode;
+    }
+    .search input::placeholder{
+        color: $textdarkmode;
+    }
+    .search button{
+        color: $white;
+        background-color: $blue;
+    }
+    .search button:hover{
+        background-color: #60ABFF;
+    }
+    .avatar{
+        background-color: gainsboro;
+    }
+    .pseudo{
+        color: $textdarkmode;
+    }
+    .dateCreation{   
+        color: $textdarkmode;
+    }
+    .identifiant{
+        color: $blue;
+    }
+    .biographie{
+        color: $textdarkmode;
+    }
+    .stats{
+        background-color: $backgrounddarkmode;
+    }
+    #repos{
+        color: $textdarkmode;
+    }
+    .repos{
+        color: $textdarkmode;
+    }
+    #followers{
+        color: $textdarkmode; 
+    }
+    .followers{
+        color: $textdarkmode;
+    }
+    #following{
+        color: $textdarkmode;
+    }
+    .following{
+        color: $textdarkmode;
+    }
+    .localisation{
+        color: $textdarkmode;
+    }
+    .twitter{
+        color: $textdarkmode;
+    }
+    .web{
+        color: $textdarkmode;
+    }
+    .building{
+        color: $textdarkmode;
+    }
 }
-header h1{
-    font-size: $h1fontsize;
-    font-weight: $h1fontweight;
-    line-height: $h1lineheight;
-    grid-area: 2 / 1 / 2 / 1;
-    justify-self: flex-start;
-    align-self: center;
-    color: $textdarkmode;
-}
-header h1:hover{
-    cursor: pointer;
-}
-.Dark{
-    grid-area: 2 / 2 / 2 / 2;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    display: grid;
-    grid-template: 100% / 50% 50%;
-    width: 100%;
-}
-#moon{
-    grid-area: 1 / 2 / 1 / 2;
-    justify-self: flex-end;
-}
-.light{
-    grid-area: 1 / 1 / 1 / 1;
-    align-self: center;
-    justify-self: flex-start;
-}
-header span, #moon, .sun{
-    grid-area: 2 / 2 / 2 / 2;
-    align-self: center;
-    color: $lightgrey;
-}
-header span{
-    font-size: $h4fontsize;
-    font-weight: bold;
-    line-height: $h4lineheight;
-    justify-self: flex-start;
-    letter-spacing: 2.5px;
-    color: $textdarkmode;
-}
-header #moon, #sun{
-    grid-area: 1 / 2 / 1 / 2;
-    justify-self: flex-end;
-    align-self: center;
-}
-header .light:hover, header .sun:hover, header .Dark{
-    cursor: pointer;
-    color: $sundarkmode;
-    fill: $sundarkmode;
-}
-#moon{
-    visibility: hidden;
-}
-.dark{
-    visibility: hidden;
-}
-
-/* MAIN */
-
-main{
-    grid-area: 2 / 2 / 2 / 2;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 13% 87%;
-    grid-gap: 5%;
-}
-
-/* SECTION 1*/
-div{
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-    border-radius: 15px;
-    background-color: $secondarybackgrounddarkmode;
-}
-.search{
-    grid-area: 1 / 1 / 1 / 1;
-    display: grid;
-    grid-template: 100% / 10% 60% 15% 15%;
-}
-.search img{
-    grid-area: 1 / 1 / 1 / 1;
-    justify-self: center;
-    align-self: center;
-}
-.search input{
-    border: none;   
-    font-family: $mainfont;
-    font-size: 18px;
-    outline: none;
-    caret-color: $blue;
-    color: $textdarkmode;
-    background-color: $secondarybackgrounddarkmode;
-}
-.search input::placeholder{
-    color: $textdarkmode;
-}
-.search button{
-    border: none;
-    border-radius: 10px;
-    height: 75%;
-    width: 85%;
-    justify-self: center;
-    align-self: center;
-    color: $white;
-    background-color: $blue;
-    font-size: $h3fontsize;
-    font-family: $mainfont;
-}
-.search button:hover{
-    cursor: pointer;
-    background-color: #60ABFF;
-}
-
-/* SECTION 2*/
-
-.return{
-    display: grid;
-    grid-template-columns: 26% 5% 30% 5% 30%;
-    grid-template-rows: 25% 20% 25% 10% 16%;
-    grid-gap: 1%;
-}
-.avatar{
-    grid-area: 1 / 1 / -4 / -4;
-    border-radius: 50%;
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    height: 50%;
-    width: 45%;
-    background-color: gainsboro;
-}
-.pseudo{
-    grid-area: 1 / 2 / 1 / -2;
-    align-self: center;
-    font-size: $h1fontsize;
-    font-weight: $h1fontweight;
-    line-height: $h1lineheight;
-    color: $textdarkmode;
-}
-.dateCreation{
-    grid-area: 1 / 5 / 1 / 5;
-    align-self: center;
-    justify-self: flex-start;   
-    color: $textdarkmode;
-}
-.identifiant{
-    grid-area: 1 / 2 / 1 / -2;
-    align-self: flex-end;
-    color: $blue;
-}
-.identifiant:hover{
-    cursor: pointer;
-    text-decoration-line: underline;
-}
-.biographie{
-    grid-area: 2 / 2 / 2 / -1;
-    width: 90%;
-    color: $textdarkmode;
-}
-.stats{
-    grid-area: 3 / 2 / 3 / -3;
-    height: 70%;
-    width: 180%;
-    display: grid;
-    grid-template-columns: 5% 20% 30% 20% 5%;
-    grid-template-rows: 50% 50%;
-    box-shadow: none;
-    grid-gap: 5%;
-    background-color: $backgrounddarkmode;
-}
-#repos{
-    grid-area: 1 / 2 / 1 / 2;
-    align-self: flex-end;
-    color: $textdarkmode;
-}
-.repos{
-    grid-area: 2 / 2 / 2 / 2;
-    align-self: flex-start;
-    font-size: $h2fontsize;
-    font-weight: bold;
-    color: $textdarkmode;
-}
-#followers{
-    grid-area: 1 / 3 / 1 / 3;
-    align-self: flex-end;
-    color: $textdarkmode; 
-}
-.followers{
-    grid-area: 2 / 3 / 2 / 3;
-    align-self: flex-start;
-    font-size: $h2fontsize;
-    font-weight: bold;
-    color: $textdarkmode;
-}
-#following{
-    grid-area: 1 / 4 / 1 / 4;
-    align-self: flex-end;
-    color: $textdarkmode;
-}
-.following{
-    grid-area: 2 / 4 / 2 / 4;
-    align-self: flex-start;
-    font-size: $h2fontsize;
-    font-weight: bold;
-    color: $textdarkmode;
-}
-.icone-nav{
-    grid-area: 4 / 2 / 4 / 2;
-    justify-self: center;
-    align-self: center;
-}
-.localisation{
-    grid-area: 4 / 3 / 4 / 3;
-    justify-self: flex-start;
-    align-self: center;
-    color: $textdarkmode;
-}
-.localisation:hover{
-    cursor: pointer;
-    text-decoration-line: underline;
-}
-.icone-twitter{
-    grid-area: 4 / 4 / 4 / 4;
-    justify-self: center;
-    align-self: center;
-}
-.icone-twitter:hover{
-    cursor: pointer;
-}
-.twitter{
-    grid-area: 4 / 5 / 4 / 5;
-    justify-self: flex-start;
-    align-self: center;
-    color: $textdarkmode;
-}
-.twitter:hover{
-    cursor: pointer;
-    text-decoration-line: underline;
-}
-.icone-web{
-    grid-area: 5 / 2 / 5 / 2;
-    justify-self: center;
-    align-self: flex-start;
-}
-.web{
-    grid-area: 5 / 3 / 5 / 3;
-    justify-self: flex-start;
-    align-self: flex-start;
-    color: $textdarkmode;
-}
-.web:hover{
-    cursor: pointer;
-    text-decoration-line: underline;
-}
-.icone-building{
-    grid-area: 5 / 4 / 5 / 4;
-    align-self: flex-start;
-    justify-self: center;
-}
-.building{
-    grid-area: 5 / 5 / 5 / 5;
-    justify-self: flex-start;
-    align-self: flex-start;
-    color: $textdarkmode;
-}
-.building:hover{
-    cursor: pointer;
-    text-decoration-line: underline;
-}}
