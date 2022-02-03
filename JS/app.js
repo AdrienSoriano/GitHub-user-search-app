@@ -38,12 +38,7 @@ function API (userName){
           document.querySelector('.dateCreation').innerHTML = "Joined" +" "+ day+" "+ month[date.getMonth()] + " "+ year
           document.querySelector('.biographie').innerHTML = data.bio
           if(data.bio == null){
-            let Profil = document.querySelector('.biographie').innerHTML
-            Profil = 'This profil has no bio.'
-            Profil.style.opacity = '50%'
-          }
-          else{
-            Profil.style.opacity = '100%'
+            document.querySelector('.biographie').innerHTML = 'This profil has no bio.'
           }
           document.querySelector('.repos').innerHTML = data.public_repos
           document.querySelector('.followers').innerHTML = data.followers
