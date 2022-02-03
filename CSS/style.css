@@ -175,8 +175,8 @@ input {
   border-radius: 50%;
   justify-self: center;
   align-self: center;
-  height: 50%;
-  width: 45%;
+  height: 55%;
+  width: 50%;
 }
 
 .pseudo {
@@ -196,6 +196,7 @@ input {
 .identifiant {
   grid-area: 1/2/1/-2;
   align-self: flex-end;
+  padding-bottom: 5%;
 }
 
 .identifiant:hover {
@@ -358,11 +359,15 @@ body.light-mode #sun, body.light-mode .sun {
 body.light-mode .light {
   visibility: hidden;
 }
+body.light-mode header span:hover, body.light-mode #Path:hover {
+  color: #2b3442;
+  fill: #2b3442;
+}
 body.light-mode div {
   background-color: #fefefe;
 }
 body.light-mode .search input {
-  color: #697c9a;
+  color: #222731;
 }
 body.light-mode .search button {
   color: #fefefe;
@@ -370,9 +375,6 @@ body.light-mode .search button {
 }
 body.light-mode .search button:hover {
   background-color: #60ABFF;
-}
-body.light-mode .avatar {
-  background-color: gainsboro;
 }
 body.light-mode .pseudo {
   color: #2b3442;

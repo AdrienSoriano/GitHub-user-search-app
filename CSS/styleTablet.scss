@@ -1,6 +1,6 @@
 /* suivi de la charte graphique sur le fichier figma pour la tablette*/
     
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 
     $defaultwidth: 100%;
     $defautlheight: 100vh;
@@ -29,7 +29,6 @@
     $sundarkmode: #90A4D4;
 
 html{
-    background-color: $maincolor;
     width: $defaultwidth;
     height: $defautlheight;
     margin: 0;
@@ -173,14 +172,12 @@ div{
     grid-gap: 1%;
 }
 .avatar{
-    grid-area: 2 / 3 / 2 / 3;
+    grid-area: 2 / 3 / 2 / -3;
     border-radius: 50%;
     justify-self: flex-start;
     align-self: center;
-    display: flex;
-    height: 110%;
-    width: 85%;
-    background-color: $black;
+    height: 90%;
+    width: 50%;
 }
 .pseudo{
     grid-area: 2 / 4 / 2 / -1;
@@ -189,12 +186,14 @@ div{
     font-weight: $h1fontweight;
     line-height: $h1lineheight;
     color: $black;
+    padding-top: 4%;
 }
 .dateCreation{
     grid-area: 2 / 4 / 2 / -1;
     align-self: flex-end;
     justify-self: flex-start;
     color: $lightgrey;
+    padding-bottom: 5%;
 }
 .identifiant{
     grid-area: 2 / 4 / 2 / -1;

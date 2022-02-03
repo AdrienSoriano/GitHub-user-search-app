@@ -184,8 +184,8 @@ input{
     border-radius: 50%;
     justify-self: center;
     align-self: center;
-    height: 50%;
-    width: 45%;
+    height: 55%;
+    width: 50%;
 }
 .pseudo{
     grid-area: 1 / 2 / 1 / -2;
@@ -202,6 +202,7 @@ input{
 .identifiant{
     grid-area: 1 / 2 / 1 / -2;
     align-self: flex-end;
+    padding-bottom: 5%;
 }
 .identifiant:hover{
     cursor: pointer;
@@ -339,11 +340,15 @@ body.light-mode{
     .light{
         visibility: hidden;
     }
+    header span:hover, #Path:hover{
+        color: $black;
+        fill: $black;
+    }
     div{
         background-color: $white;
     }
     .search input{
-        color: $lightgrey
+        color: #222731
     }
     .search button{
         color: $white;
@@ -351,9 +356,6 @@ body.light-mode{
     }
     .search button:hover{
         background-color: #60ABFF;
-    }
-    .avatar{
-        background-color: gainsboro;
     }
     .pseudo{
         color: $black;
