@@ -126,11 +126,16 @@ div {
   align-self: center;
 }
 
-.search input {
+.search img:hover {
+  cursor: pointer;
+}
+
+input {
   border: none;
   font-family: Space Mono;
   font-size: 18px;
   outline: none;
+  caret-color: #0079ff;
 }
 
 .search button {
@@ -142,6 +147,14 @@ div {
   align-self: center;
   font-size: 16px;
   font-family: Space Mono;
+}
+
+.error {
+  justify-self: center;
+  align-self: center;
+  color: #F74646;
+  font-weight: bold;
+  visibility: hidden;
 }
 
 .search button:hover {

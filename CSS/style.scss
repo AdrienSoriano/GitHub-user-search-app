@@ -139,11 +139,15 @@ div{
     justify-self: center;
     align-self: center;
 }
-.search input{
+.search img:hover{
+    cursor: pointer;
+}
+input{
     border: none;   
     font-family: $mainfont;
     font-size: 18px;
     outline: none;
+    caret-color: $blue;
 }
 .search button{
     border: none;
@@ -154,6 +158,13 @@ div{
     align-self: center;
     font-size: $h3fontsize;
     font-family: $mainfont;
+}
+.error{
+    justify-self: center;
+    align-self: center;
+    color: #F74646;
+    font-weight: bold;
+    visibility: hidden;
 }
 .search button:hover{
     cursor: pointer;

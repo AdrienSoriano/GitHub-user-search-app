@@ -16,6 +16,9 @@ function API (userName){
         response.json().then((data) => {
           document.querySelector('.avatar').setAttribute('src', data.avatar_url)
           document.querySelector('.pseudo').innerHTML = data.name
+          if(data.name == null){
+            document.querySelector('.pseudo').innerHTML = data.login
+          }
           document.querySelector('.identifiant').innerHTML = `@`+data.login
           
           const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -31,25 +34,51 @@ function API (userName){
           document.querySelector('.followers').innerHTML = data.followers
           document.querySelector('.following').innerHTML = data.following
           document.querySelector('.localisation').innerHTML = data.location
+          if (data.location == null){
+            let localisation = document.querySelector('.localisation')
+            localisation.innerHTML = 'Not available'
+          }
           document.querySelector('.twitter').innerHTML = data.twitter_username
           if (data.twitter == null){
-            document.querySelector('.twitter').innerHTML = 'Not available'
+            let Twitter = document.querySelector('.twitter')
+            Twitter.innerHTML = 'Not available'
           }
-          document.querySelector('.web').innerHTML = data.blog
-          document.querySelector('.building').innerHTML = data.company
+          let Blog = document.querySelector('.web') 
+          if (data.blog == null){
+            Blog.innerHTML = 'Not available'
+          }
+          else{
+            Blog.innerHTML= data.blog
+          }
+            let Company = document.querySelector('.building')
+            Company.innerHTML = data.company
+          if (data.company == null){
+            Company.innerHTML = 'Not available'
+          }
+          console.log(data);
+         
 
 }))}
 
 API('octocat')
 
 const search = document.querySelector('button')
-
+let error = document.querySelector('.error')
 search.addEventListener('click', function User (userName){
   
-  let input = document.querySelector('input')
-  let inpValue = input.value
-  
+  let input = document.querySelector('input').value
+  if(data.message){
+    error.style.visibility = 'visible'
+   
+  }
+      API(input)
+})
+console.log(error);
+const searchClick = document.querySelector('.searchClick')
 
-      API('user')
+searchClick.addEventListener('click', function Clicker (userName){
+  let input = document.querySelector('input').value
+
+      API(input)
 })
 
