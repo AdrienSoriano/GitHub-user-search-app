@@ -109,6 +109,11 @@ function API (userName){
             Blog.innerHTML = 'Not available'
             Blog.style.opacity = '50%'
             BlogIcon.style.opacity = '50%'
+            let href = Blog.getAttribute("href")
+          href = data.blog
+            Blog.setAttribute('href', '.')
+            Blog:hover.style.cursor = 'default'
+            
           }
           else{
             Blog.style.opacity = '100%'

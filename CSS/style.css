@@ -264,9 +264,10 @@ input {
 }
 
 .localisation {
-  grid-area: 4/3/4/3;
+  grid-area: 4/3/4/-3;
   justify-self: flex-start;
   align-self: center;
+  word-break: break-all;
 }
 
 .localisation:hover {
@@ -286,9 +287,10 @@ input {
 }
 
 .twitter {
-  grid-area: 4/5/4/5;
+  grid-area: 4/5/4/-1;
   justify-self: flex-start;
   align-self: center;
+  word-break: break-all;
 }
 
 .twitter:hover {
@@ -307,6 +309,7 @@ input {
   grid-area: 5/3/5/3;
   justify-self: flex-start;
   align-self: flex-start;
+  word-break: break-all;
 }
 
 .web:hover {
@@ -322,9 +325,10 @@ input {
 }
 
 .building {
-  grid-area: 5/5/5/5;
+  grid-area: 5/5/5/-1;
   justify-self: flex-start;
   align-self: flex-start;
+  word-break: break-all;
 }
 
 .building:hover {
